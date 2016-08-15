@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="教程,aws,xshell," />
 
 
 
@@ -84,15 +84,49 @@
 
 
 
-<meta name="description" content="产品 python 阅读 思考">
-<meta property="og:type" content="website">
-<meta property="og:title" content="聚沙成塔">
-<meta property="og:url" content="http://faithc.com/tags/aws/index.html">
+<meta name="description" content="aws默认是使用密钥登陆的，不提供用户名和密码登陆。如果需要使用root账号来完成一些操作时就不支持了。解决办法是通过密钥登陆到ec2上，为root账号设置密码。
+需要用到的工具是
+
+putty
+.pem密钥  
+你的私有密钥对，用于linux环境下登陆
+windows环境下需要将pem转换成ppk
+
+
+puttygen  在windows环境下需要
+
+登陆ec2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用root登陆aws的EC2主机">
+<meta property="og:url" content="http://faithc.com/2016/08/12/使用root登陆aws的EC2主机/index.html">
 <meta property="og:site_name" content="聚沙成塔">
-<meta property="og:description" content="产品 python 阅读 思考">
+<meta property="og:description" content="aws默认是使用密钥登陆的，不提供用户名和密码登陆。如果需要使用root账号来完成一些操作时就不支持了。解决办法是通过密钥登陆到ec2上，为root账号设置密码。
+需要用到的工具是
+
+putty
+.pem密钥  
+你的私有密钥对，用于linux环境下登陆
+windows环境下需要将pem转换成ppk
+
+
+puttygen  在windows环境下需要
+
+登陆ec2">
+<meta property="og:updated_time" content="2016-08-12T15:45:38.489Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="聚沙成塔">
-<meta name="twitter:description" content="产品 python 阅读 思考">
+<meta name="twitter:title" content="使用root登陆aws的EC2主机">
+<meta name="twitter:description" content="aws默认是使用密钥登陆的，不提供用户名和密码登陆。如果需要使用root账号来完成一些操作时就不支持了。解决办法是通过密钥登陆到ec2上，为root账号设置密码。
+需要用到的工具是
+
+putty
+.pem密钥  
+你的私有密钥对，用于linux环境下登陆
+windows环境下需要将pem转换成ppk
+
+
+puttygen  在windows环境下需要
+
+登陆ec2">
 
 
 
@@ -113,9 +147,9 @@
 
 
 
-  <link rel="canonical" href="http://faithc.com/tags/aws/"/>
+  <link rel="canonical" href="http://faithc.com/2016/08/12/使用root登陆aws的EC2主机/"/>
 
-  <title> 标签: aws | 聚沙成塔 </title>
+  <title> 使用root登陆aws的EC2主机 | 聚沙成塔 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -145,7 +179,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -233,102 +267,142 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        aws
-        <small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/08/12/使用root登陆aws的EC2主机/" itemprop="url">
-              
-                <span itemprop="name">使用root登陆aws的EC2主机</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-12T17:15:41+08:00"
-              content="2016-08-12" >
-          08-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/08/10/setup-vpn-on-aws/" itemprop="url">
-              
-                <span itemprop="name">科学上网-10分钟学会用AWS搭建免费私人VPN</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-10T13:20:01+08:00"
-              content="2016-08-10" >
-          08-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/25/aws/" itemprop="url">
-              
-                <span itemprop="name">开始使用aws</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-25T16:02:21+08:00"
-              content="2016-07-25" >
-          07-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用root登陆aws的EC2主机
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-12T17:15:41+08:00" content="2016-08-12">
+              2016-08-12
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/12/使用root登陆aws的EC2主机/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/12/使用root登陆aws的EC2主机/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>aws默认是使用密钥登陆的，不提供用户名和密码登陆。如果需要使用root账号来完成一些操作时就不支持了。<br>解决办法是通过密钥登陆到ec2上，为root账号设置密码。</p>
+<p>需要用到的工具是</p>
+<ul>
+<li>putty</li>
+<li>.pem密钥  <ul>
+<li>你的私有密钥对，用于linux环境下登陆</li>
+<li>windows环境下需要将pem转换成ppk</li>
+</ul>
+</li>
+<li>puttygen  在windows环境下需要</li>
+</ul>
+<h1 id="登陆ec2"><a href="#登陆ec2" class="headerlink" title="登陆ec2"></a>登陆ec2</h1>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/教程/" rel="tag">#教程</a>
+          
+            <a href="/tags/aws/" rel="tag">#aws</a>
+          
+            <a href="/tags/xshell/" rel="tag">#xshell</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/10/setup-vpn-on-aws/" rel="next" title="科学上网-10分钟学会用AWS搭建免费私人VPN">
+                <i class="fa fa-chevron-left"></i> 科学上网-10分钟学会用AWS搭建免费私人VPN
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -336,6 +410,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/12/使用root登陆aws的EC2主机/"
+           data-title="使用root登陆aws的EC2主机" data-url="http://faithc.com/2016/08/12/使用root登陆aws的EC2主机/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -355,8 +437,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -406,6 +497,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#登陆ec2"><span class="nav-number">1.</span> <span class="nav-text">登陆ec2</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -509,6 +611,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

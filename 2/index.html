@@ -1,0 +1,539 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="1. 前言1.1 名词解释现场用户: 指参与活动的观众。
+会务人员: 指组织会务的主办方工作人员。
+平台人员: 指负责运营必肯平台的工作人员
+1.2 参考文档微信公众号开发文档: http://mp.weixin.qq.com/wiki/19/9fe9fdbb50fee9f9660438c551142ccf.html
+1.3 整体流程/逻辑关系
+流程描述：
+
+平台工作人员在web端后台配置好此次活">
+<meta property="og:type" content="website">
+<meta property="og:title" content="必肯蓝牙签到产品设计">
+<meta property="og:url" content="http://faithc.com/2/index.html">
+<meta property="og:site_name" content="聚沙成塔">
+<meta property="og:description" content="1. 前言1.1 名词解释现场用户: 指参与活动的观众。
+会务人员: 指组织会务的主办方工作人员。
+平台人员: 指负责运营必肯平台的工作人员
+1.2 参考文档微信公众号开发文档: http://mp.weixin.qq.com/wiki/19/9fe9fdbb50fee9f9660438c551142ccf.html
+1.3 整体流程/逻辑关系
+流程描述：
+
+平台工作人员在web端后台配置好此次活">
+<meta property="og:image" content="http://blog-10057309.cos.myqcloud.com/%E6%B5%81%E7%A8%8B.png">
+<meta property="og:image" content="http://blog-10057309.cos.myqcloud.com/%E5%9C%BA%E6%99%AF.png">
+<meta property="og:image" content="http://blog-10057309.cos.myqcloud.com/page2.png">
+<meta property="og:image" content="http://blog-10057309.cos.myqcloud.com/%E4%BC%9A%E5%8A%A1%E4%BA%BA%E5%91%98%E9%A1%B5%E9%9D%A2.png">
+<meta property="og:image" content="http://blog-10057309.cos.myqcloud.com/%E6%89%8B%E6%9C%BA%E7%AB%AF.png">
+<meta property="og:updated_time" content="2016-08-19T05:27:11.149Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="必肯蓝牙签到产品设计">
+<meta name="twitter:description" content="1. 前言1.1 名词解释现场用户: 指参与活动的观众。
+会务人员: 指组织会务的主办方工作人员。
+平台人员: 指负责运营必肯平台的工作人员
+1.2 参考文档微信公众号开发文档: http://mp.weixin.qq.com/wiki/19/9fe9fdbb50fee9f9660438c551142ccf.html
+1.3 整体流程/逻辑关系
+流程描述：
+
+平台工作人员在web端后台配置好此次活">
+<meta name="twitter:image" content="http://blog-10057309.cos.myqcloud.com/%E6%B5%81%E7%A8%8B.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://faithc.com/2/"/>
+
+  <title>
+  
+
+  
+    必肯蓝牙签到产品设计 | 聚沙成塔
+  
+</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-78481276-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">聚沙成塔</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">挖一口属于自己的井</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+      <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><h2 id="1-1-名词解释"><a href="#1-1-名词解释" class="headerlink" title="1.1 名词解释"></a>1.1 名词解释</h2><p>现场用户<br>: 指参与活动的观众。</p>
+<p>会务人员<br>: 指组织会务的主办方工作人员。</p>
+<p>平台人员<br>: 指负责运营必肯平台的工作人员</p>
+<h2 id="1-2-参考文档"><a href="#1-2-参考文档" class="headerlink" title="1.2 参考文档"></a>1.2 参考文档</h2><p>微信公众号开发文档<br>: <a href="http://mp.weixin.qq.com/wiki/19/9fe9fdbb50fee9f9660438c551142ccf.html" target="_blank" rel="external">http://mp.weixin.qq.com/wiki/19/9fe9fdbb50fee9f9660438c551142ccf.html</a></p>
+<h2 id="1-3-整体流程-逻辑关系"><a href="#1-3-整体流程-逻辑关系" class="headerlink" title="1.3 整体流程/逻辑关系"></a>1.3 整体流程/逻辑关系</h2><p><img src="http://blog-10057309.cos.myqcloud.com/%E6%B5%81%E7%A8%8B.png" alt="流程"></p>
+<p>流程描述：</p>
+<ol>
+<li>平台工作人员在web端后台配置好此次活动的信息。不同的配置类型选项，会影响后续的活动流程。<br>1.1 是否需要短信验证手机号<br>1.2 是否设置受邀名单<br>1.3 活动的配置内容等，如链接地址，卡券核销人员信息等。</li>
+<li>现场用户抵达现场后，通过海报等提示打开蓝牙设备，使用微信摇一摇，摇出活动后，根据配置进入的链接。进入链接，提示用户授权，获取用户昵称和头像。此环节平均用时数分钟。<br>2.1 如果设置了受邀名单，则需要用户输入的手机号在受邀名单中，否则无法提交或获取验证码。<br>2.2 如果设置了需要接受短信验证，则用户输入完手机号后，会收到短信验证码。验证短信无误，方可提交。</li>
+<li>现场用户入场前活动完成，会收到一张卡券。用户凭借卡券入场。入口处由会务人员扫描二维码，确认用户有效，引导用户快速入场。</li>
+<li>用户完成入场前活动后，现场大屏幕和工作人员的web页面均可实时看到参与信息。</li>
+<li>会务人员在入口处使用微信扫描现场用户的卡券二维码进行卡券核销，核销成功则邀请用户入场。不成功则无法入场。此环节只需要数秒钟。</li>
+<li>活动结束，或活动过程中，会务人员与平台员工均可浏览或导出参会用户信息。</li>
+</ol>
+<p><img src="http://blog-10057309.cos.myqcloud.com/%E5%9C%BA%E6%99%AF.png" alt="场景"></p>
+<p>产品逻辑：在活动外围多处放置蓝牙设备和说明海报，引导用户完成较为复杂的会前签到活动。在入口处流程极简，避免阻塞。</p>
+<p>通过卡券，引导用户关注公众号，积累用户。</p>
+<h1 id="2-功能"><a href="#2-功能" class="headerlink" title="2. 功能"></a>2. 功能</h1><h2 id="2-1-平台人员活动配置页面（WEB端）"><a href="#2-1-平台人员活动配置页面（WEB端）" class="headerlink" title="2.1 平台人员活动配置页面（WEB端）"></a>2.1 平台人员活动配置页面（WEB端）</h2><p><img src="http://blog-10057309.cos.myqcloud.com/page2.png" alt="后台配置"></p>
+<h3 id="2-1-1-导入邀请名单"><a href="#2-1-1-导入邀请名单" class="headerlink" title="2.1.1 导入邀请名单"></a>2.1.1 导入邀请名单</h3><h3 id="2-1-2-设置是否开通短信验证"><a href="#2-1-2-设置是否开通短信验证" class="headerlink" title="2.1.2 设置是否开通短信验证"></a>2.1.2 设置是否开通短信验证</h3><h3 id="2-1-3-设置卡券核销人员信息"><a href="#2-1-3-设置卡券核销人员信息" class="headerlink" title="2.1.3 设置卡券核销人员信息"></a>2.1.3 设置卡券核销人员信息</h3><h3 id="2-1-4配置页面"><a href="#2-1-4配置页面" class="headerlink" title="2.1.4配置页面"></a>2.1.4配置页面</h3><h2 id="2-2-会务人员（B端）"><a href="#2-2-会务人员（B端）" class="headerlink" title="2.2 会务人员（B端）"></a>2.2 会务人员（B端）</h2><p><img src="http://blog-10057309.cos.myqcloud.com/%E4%BC%9A%E5%8A%A1%E4%BA%BA%E5%91%98%E9%A1%B5%E9%9D%A2.png" alt="会务人员端"></p>
+<h3 id="2-2-1-查看会场状况"><a href="#2-2-1-查看会场状况" class="headerlink" title="2.2.1 查看会场状况"></a>2.2.1 查看会场状况</h3><p>会务人员可查看多少人到场。</p>
+<h3 id="2-2-2-搜索用户"><a href="#2-2-2-搜索用户" class="headerlink" title="2.2.2 搜索用户"></a>2.2.2 搜索用户</h3><p>会务人员可根据用户姓名或用户手机号搜索用户。</p>
+<h3 id="2-2-3-导出用户信息列表"><a href="#2-2-3-导出用户信息列表" class="headerlink" title="2.2.3 导出用户信息列表"></a>2.2.3 导出用户信息列表</h3><h3 id="2-2-4-修改用户信息"><a href="#2-2-4-修改用户信息" class="headerlink" title="2.2.4 修改用户信息"></a>2.2.4 修改用户信息</h3><p>防止录入错误，导致受邀嘉宾无法入场。</p>
+<h2 id="2-3-用户端（C端）"><a href="#2-3-用户端（C端）" class="headerlink" title="2.3 用户端（C端）"></a>2.3 用户端（C端）</h2><p><img src="http://blog-10057309.cos.myqcloud.com/%E6%89%8B%E6%9C%BA%E7%AB%AF.png" alt="现场用户端"></p>
+<h3 id="2-3-1-输入手机号"><a href="#2-3-1-输入手机号" class="headerlink" title="2.3.1 输入手机号"></a>2.3.1 输入手机号</h3><p>如果选择了邀请名单，则用户输入手机号时要判断用户输入的号码是否在邀请名单中。</p>
+<p>要对用户输入的号码进行有效检验。</p>
+<h3 id="2-3-2-接收短信验证码"><a href="#2-3-2-接收短信验证码" class="headerlink" title="2.3.2 接收短信验证码"></a>2.3.2 接收短信验证码</h3><p>用户提交手机号后，可点击获取验证码。</p>
+<p>点击获取验证码后，倒计时60秒，并将按钮文字设置成“xxs内验证码到达”</p>
+<h3 id="2-3-3-验证短信验证码"><a href="#2-3-3-验证短信验证码" class="headerlink" title="2.3.3 验证短信验证码"></a>2.3.3 验证短信验证码</h3><p>验证短信无误，则将用户信息保存。</p>
+<h2 id="2-4大屏幕"><a href="#2-4大屏幕" class="headerlink" title="2.4大屏幕"></a>2.4大屏幕</h2><p>用户活动完成后，从微信接口获取用户头像信息，将头像展示在大屏幕上。</p>
+<h1 id="3-其他功能"><a href="#3-其他功能" class="headerlink" title="3. 其他功能"></a>3. 其他功能</h1><h2 id="3-1-短信通知"><a href="#3-1-短信通知" class="headerlink" title="3.1 短信通知"></a>3.1 短信通知</h2><h2 id="3-2-弹幕"><a href="#3-2-弹幕" class="headerlink" title="3.2 弹幕"></a>3.2 弹幕</h2><p>## </p>
+
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2/index.html"
+           data-title="必肯蓝牙签到产品设计" data-url="http://faithc.com/2/index.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="magicdroid" />
+          <p class="site-author-name" itemprop="name">magicdroid</p>
+          <p class="site-description motion-element" itemprop="description">产品 python 阅读 思考</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">magicdroid</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"faithc"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
